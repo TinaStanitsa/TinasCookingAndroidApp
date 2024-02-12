@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.tina.tinascooking.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_latestRecipesFragment"
+            app:destination="@id/latestRecipesFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"/>
+        <action
+            android:id="@+id/action_mainFragment_to_mainCoursesFragment"
+            app:destination="@id/mainCoursesFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"
+            />
+        <action
+            android:id="@+id/action_mainFragment_to_dessertsFragment"
+            app:destination="@id/dessertsFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/latestRecipesFragment"
+        android:name="com.tina.tinascooking.fragments.LatestRecipesFragment"
+        android:label="fragment_latest_recipes"
+        tools:layout="@layout/fragment_latest_recipes" >
+        <action
+            android:id="@+id/action_latestRecipesFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainCoursesFragment"
+        android:name="com.tina.tinascooking.fragments.MainCoursesFragment"
+        android:label="fragment_main_courses"
+        tools:layout="@layout/fragment_main_courses" >
+        <action
+            android:id="@+id/action_mainCoursesFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/dessertsFragment"
+        android:name="com.tina.tinascooking.fragments.DessertsFragment"
+        android:label="fragment_desserts"
+        tools:layout="@layout/fragment_desserts">
+        <action
+            android:id="@+id/action_dessertsFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.tina.tinascooking.fragments.RecipeFragment"
+        android:label="RecipeFragment" />
+</navigation>
